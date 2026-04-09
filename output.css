@@ -563,9 +563,6 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
-  .max-w-\[70\%\] {
-    max-width: 70%;
-  }
   .max-w-lg {
     max-width: var(--container-lg);
   }
@@ -848,6 +845,12 @@
       background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
     }
   }
+  .bg-black\/50 {
+    background-color: color-mix(in srgb, #000 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
   .bg-black\/80 {
     background-color: color-mix(in srgb, #000 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1026,9 +1029,6 @@
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
-  }
-  .px-12 {
-    padding-inline: calc(var(--spacing) * 12);
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
@@ -1280,6 +1280,10 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .placeholder-zinc-400 {
     &::placeholder {
@@ -1743,11 +1747,6 @@
       justify-content: flex-start;
     }
   }
-  .md\:gap-12 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 12);
-    }
-  }
   .md\:p-12 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 12);
@@ -1791,6 +1790,12 @@
       line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
   .lg\:col-span-5 {
     @media (width >= 64rem) {
       grid-column: span 5 / span 5;
@@ -1814,11 +1819,6 @@
   .lg\:grid-cols-12 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(12, minmax(0, 1fr));
-    }
-  }
-  .lg\:p-12 {
-    @media (width >= 64rem) {
-      padding: calc(var(--spacing) * 12);
     }
   }
   .lg\:p-16 {

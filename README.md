@@ -9,7 +9,6 @@ This is the official website for **KAYON Integrated Consults**, based in Lokoja,
 ## Tech Stack
 * HTML5
 * Tailwind CSS
-* Google Fonts (Roboto)
 
 ## Contact
 For project inquiries, please use the contact form on the website or visit us at our Lokoja office.

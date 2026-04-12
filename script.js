@@ -53,26 +53,6 @@ function filterProjects(category) {
       }
     });
   }
-  
-  // Simple form submission (demo - replace with your backend later)
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const form = this;
-    const originalText = form.querySelector('button').innerHTML;
-    
-    // Show loading state
-    form.querySelector('button').innerHTML = `
-      <span class="animate-pulse">Sending your message...</span>
-    `;
-    
-    // Simulate network delay
-    setTimeout(() => {
-      alert("✅ Thank you! Your message has been sent successfully.\n\nWe'll get back to you within 24 hours.");
-      form.reset();
-      form.querySelector('button').innerHTML = originalText;
-    }, 1800);
-  });
 
 const projects = [
   {
